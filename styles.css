@@ -1,11 +1,11 @@
+:root {
+  --color1: #596d48;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-:root {
-  --color1: #596d48;
 }
 
 @font-face {
@@ -15,23 +15,21 @@
 
 body {
   display: flex;
-  flex-direction: row;
   min-height: 100vh;
-  overflow: auto;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .background-section {
   flex: 1;
   background-image: url(images/fleur-eADQs40WywY-unsplash.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   position: relative;
 }
 
 .logo-div {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 40px;
@@ -52,13 +50,12 @@ body {
 .logo-p {
   font-size: 60px;
   color: white;
+  font-weight: 900;
 }
 
 .author-p {
   font-size: 13px;
   color: white;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   position: absolute;
   bottom: 0;
   left: 25%;
@@ -93,8 +90,6 @@ body {
 .text-h1,
 .text-p,
 .form-h1 {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   font-size: 16px;
   letter-spacing: 0.5px;
 }
@@ -109,12 +104,11 @@ body {
 }
 
 .form-h1 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .text-h1 span {
   color: red;
-  font-weight: 900;
 }
 
 form {
@@ -132,8 +126,6 @@ form {
 }
 
 .form-row label {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -145,18 +137,20 @@ form {
   border: 1px solid #e5e7eb;
   border-radius: 5px;
   outline: none;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   font-size: 15px;
   padding: 10px;
 }
 
 .form-row input:focus {
-  border: 1.5px solid blue;
+  border: 1px solid blue;
+  box-shadow: 1px 1px gray;
 }
 
 .form-row .error-message {
   display: none;
+  color: red;
+  font-size: 10px;
+  letter-spacing: 0.8px;
 }
 
 .form-section-footer button {
@@ -174,8 +168,6 @@ form {
 .form-section-footer p {
   margin-left: 40px;
   font-size: 15px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   margin-bottom: 20px;
 }
 
@@ -185,6 +177,18 @@ form {
   font-weight: 700;
 }
 
-input[type="password"]:not(:focus):invalid {
+.error:not(:focus):invalid {
   border: 1px solid red;
+}
+
+input:valid {
+  border: 1px solid green;
+}
+
+input:focus:invalid {
+  border: 1px solid red;
+}
+
+input::placeholder {
+  font-size: 12px;
 }
