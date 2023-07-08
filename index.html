@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="background-section">
+      <div class="logo-div">
+        <img
+          src="images/liverpool-fc-1987-1992-logo.png"
+          alt="liverpool-fc"
+          class="liverpool-img"
+        />
+        <p class="logo-p">L F C</p>
+      </div>
+      <p class="author-p">
+        Photo by
+        <a href="https://unsplash.com/@yer_a_wizard" target="_blank">Fleur</a>
+        on
+        <a href="https://unsplash.com/" target="_blank">Unsplash</a>
+      </p>
+    </div>
+    <div class="form-section">
+      <div class="form-section-header">
+        <h1 class="text-h1">
+          All LFC Official Full Members will receive an exclusive welcome pack
+          along access to Members ticket sales and to the Auto-Cup scheme*.
+          Plus, with 10% retail discount in store and online, this Membership
+          ticks all the boxes for a true <span>Red</span>.
+        </h1>
+      </div>
+      <div class="form-section-main">
+        <h1 class="form-h1"><em>Unity is strength.</em> Join us!</h1>
+        <form action="" method="get" id="main-form">
+          <div class="form-row">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="firstname" required />
+          </div>
+          <div class="form-row">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="lastname" name="last-name" required />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-row">
+            <label for="phone-number">Phone number</label>
+            <input
+              type="text"
+              id="phone-number"
+              name="phonenumber"
+              inputmode="numeric"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+            <p class="error-message">* Passwords do not match</p>
+          </div>
+          <div class="form-row">
+            <label for="confirm-password">Confirm password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              required
+            />
+          </div>
+        </form>
+      </div>
+      <div class="form-section-footer">
+        <button type="submit" form="main-form">Create Account</button>
+        <p class="footer-p">Already have an account? <span>Log in</span></p>
+      </div>
+    </div>
+  </body>
+</html>

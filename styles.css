@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color1: #596d48;
+}
+
+@font-face {
+  font-family: norseFont;
+  src: url(fonts/Norse-Bold.otf);
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.background-section {
+  flex: 1;
+  background-image: url(images/fleur-eADQs40WywY-unsplash.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.logo-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  position: absolute;
+  top: 3%;
+  font-family: norseFont;
+  width: 100%;
+  opacity: 0.5;
+  background-color: var(--color1);
+  padding: 10px;
+}
+
+.liverpool-img {
+  height: 150px;
+  width: auto;
+}
+
+.logo-p {
+  font-size: 60px;
+  color: white;
+}
+
+.author-p {
+  font-size: 13px;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+}
+
+.author-p a:visited,
+.author-p a:link {
+  color: white;
+}
+
+.form-section {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section-header {
+  position: relative;
+}
+
+.form-section-header,
+.form-section-footer {
+  flex: 1.3;
+  background-color: rgb(241, 241, 241);
+}
+
+.form-section-main {
+  margin: 20px 0 20px 40px;
+  flex: 1;
+}
+
+.text-h1,
+.text-p,
+.form-h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.text-h1 {
+  margin: 100px 80px 20px 40px;
+}
+
+.text-p {
+  font-weight: 900;
+  margin: 0 80px 40px 40px;
+}
+
+.form-h1 {
+  margin-bottom: 15px;
+}
+
+.text-h1 span {
+  color: red;
+  font-weight: 900;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  gap: 5px;
+}
+
+.form-row label {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.form-row input {
+  height: 30px;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  outline: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.form-row input:focus {
+  border: 1.5px solid blue;
+}
+
+.form-row .error-message {
+  display: none;
+}
+
+.form-section-footer button {
+  padding: 10px 40px;
+  margin: 30px 40px;
+  color: white;
+  background-color: #596d48;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  box-shadow: 1px 1px black;
+  cursor: pointer;
+}
+
+.form-section-footer p {
+  margin-left: 40px;
+  font-size: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+.form-section-footer p span {
+  color: #596d48;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+input[type="password"]:not(:focus):invalid {
+  border: 1px solid red;
+}
