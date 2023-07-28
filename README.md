@@ -2,8 +2,6 @@
 
 ### This project is done as part of the [Odin course](https://www.theodinproject.com/dashboard)
 
-### Sign-up form
-
 ### Build with
 
 - HTML Forms
